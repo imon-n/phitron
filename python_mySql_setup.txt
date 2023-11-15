@@ -1,0 +1,34 @@
+Vs code এ command prompt Terminal
+------------------------------------------------------------------
+# to create 
+python -m venv env_name
+
+#to active
+env_name\Scripts\activate
+
+#deactive
+deactivate 
+(eta deactivate er somoy use korbo just)
+
+
+To install :
+pip install mysql-connector-python
+------------------------------------------------------------------------
+just: cheacking your code::::::::::::;
+
+import mysql.connector
+mydb = mysql.connector.connect(
+    host = 'localhost',
+    user = 'root',
+    passwd = 'Nimon@029'
+)
+print(mydb)
+
+---------------------------------------------------
+
+tarpor::
+python file.py 
+(example : python test.py)
+
+-----------------------------------------------------
+
