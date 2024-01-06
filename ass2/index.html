@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ass</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+
+    .active-btn {
+        font-weight: 900;
+        background-color: red;
+    }
+
+    .nav {
+        background-color: var(--dark);
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav img {
+        width: 200px;
+    }
+
+    .box-img{
+        width: 200px;
+        margin-top: 20px;
+        border-radius: 7px;
+    }  
+    .search-box{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }    
+    #search-btn1{
+        padding: 10px 20px;
+        /* background-color: aqua; */
+        border: none;
+        border-radius: 7px;
+        text-align: center;
+        font-size: 20px;
+    }
+    #search-btn2{
+        padding: 10px 20px;
+        /* background-color: yellowgreen; */
+        border: none;
+        border-radius: 7px;
+        text-align: center;
+        font-size: 20px;
+    }
+    #search-btn3{
+        padding: 10px 20px;
+        /* background-color: blueviolet; */
+        border: none;
+        border-radius: 7px;
+        text-align: center;
+        font-size: 20px;
+    }
+    #search-btn4{
+        padding: 10px 20px;
+        /* background-color: navajowhite; */
+        border: none;
+        border-radius: 7px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .sort{
+        padding: 10px 20px;
+        /* background-color: navajowhite; */
+        border: none;
+        border-radius: 7px;
+        text-align: center;
+        font-size: 20px;
+    }
+    .blog{
+        padding: 10px 20px;
+        background-color: aqua;
+        border: none;
+        border-radius: 7px;
+        text-align: center;
+        font-size: 20px;
+    }
+    button{
+        margin-top: 15px;
+    }
+
+
+    .box{
+        width: 300px;
+        height: 450px;
+        /* border: 1px solid gray; */
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 15px;
+        margin: 5px;
+    }
+
+    #meals-containner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-img{
+        width: 300px;
+        height: 280px;
+    }
+    .h22{
+        text-align: center;
+    }
+
+    .profile-pic{
+        width: 40px;
+        height: 40px;
+        border-radius: 64px;
+    }
+
+    .verified-pic{
+        width: 20px;
+        height: 20px;
+        border-radius: 64px;
+    }
+
+    .common{
+        display: flex;
+       gap: 20px;
+       align-items: center;
+       justify-content: center;
+       padding-left: 10px;
+       padding-right: 10px;
+    }
+
+    .posted-date{
+        margin-top: -30px;
+        padding-left: 60px;
+        color: red;
+        font-size: 20px;
+    }
+
+
+
+    @media screen and (min-width: 425px) {
+        .nav img {
+            width: 150px;
+        }  
+
+        .sort{
+        padding: 7px 12px;
+        border: none;
+        text-align: center;
+        font-size: 12px;
+        }
+        .blog{
+        padding: 7px 12px;
+        background-color: aqua;
+        border: none;
+        border-radius: 7px;
+        text-align: center;
+        font-size: 12px;
+        }
+
+        .search-box{
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+      }    
+        #search-btn1{
+            padding: 6px 15px;
+            font-size: 15px;
+            border: none;
+            border-radius: 7px;
+            text-align: center;
+        }
+
+        #search-btn2{
+          padding: 6px 15px;
+          font-size: 15px;
+          border: none;
+          border-radius: 7px;
+          text-align: center;
+        }
+
+        #search-btn3{
+          padding: 6px 15px;
+          font-size: 15px;
+          border: none;
+          border-radius: 7px;
+          text-align: center;   
+        }
+        #search-btn4{
+          padding: 6px 15px;
+          font-size: 15px;
+          border: none;
+          border-radius: 7px;
+          text-align: center;
+        }
+
+        button{
+        margin-top: 2px;
+        }
+      }
+        
+    </style>
+</head>
+<body>
+
+    <!-- navbar  start -->
+    <nav class="nav">
+        <div class="brand-area container">
+            <img src="/photos/Logo (1).png" alt="programming hero Logo" />
+        </div>
+        <div class="avatar">
+            <button onclick="blog_page()" class="blog" >Blog</button>
+        </div>
+        </nav>
+        <!-- navbar end start -->
+
+<hr>
+
+    <div class="search-box">
+        <button onclick="load_All_data()"     id="search-btn1">All    </button>
+        <button onclick="load_Music_data()"   id="search-btn2">Music  </button>
+        <button onclick="load_Comedy_data()"  id="search-btn4">Comedy </button>
+        <button onclick="load_Drawing_data()" id="search-btn3">Drawing</button>
+    </div>
+
+
+    <div id="meals-containner"></div>
+
+
+
+    <script>
+
+    const formatTime = (num) => {
+        const h = Math.floor(num / 3600);
+        const min = Math.floor((num % 3600) / 60);
+        const sec = num % 60;
+        return `${h}hr ${min}min ${sec}sec`;
+    };
+        
+    function blog_page() {
+        window.location.href = 'blog.html';
+    }  
+
+
+    function setActiveButton(buttonId) {
+        const buttons = document.querySelectorAll('.search-box button');
+        buttons.forEach(button => {
+            if (button.id === buttonId) {
+                button.classList.add('active-btn');
+                button.classList.remove('inactive-btn');
+            } else {
+                button.classList.remove('active-btn');
+                button.classList.add('inactive-btn');
+            }
+        });
+    }
+
+
+    const clearMealsContainer = () => {
+        const mealsContainer = document.getElementById("meals-containner");
+        mealsContainer.innerHTML = ""; // Clear previous content
+    };
+
+
+    const load_All_data = ()=>{
+        fetch("https://openapi.programming-hero.com/api/videos/category/1000")
+        .then(res => res.json())
+        .then(data => displayData(data.data))
+
+        setActiveButton('search-btn1');
+        clearMealsContainer();
+    }
+
+
+    const displayData = (data)=>{
+        const mealsContainner = document.getElementById("meals-containner");
+
+        data.forEach((meal) =>{
+        const card = document.createElement("div");
+        card.classList.add("box")
+        const verifiedImage = meal.authors[0].verified? '<img src="/photos/verified.png"  class="verified-pic">' : '';
+
+        card.innerHTML = `<img src="${meal.thumbnail}" class="box-img">
+        <p class="posted-date">${formatTime(meal.others.posted_date)}</p>
+                                <h2>${meal.title}</h2>
+                                <div class="common">
+                                    <img src="${meal.thumbnail}" class="profile-pic">
+                                    <div>
+                                        <br>
+                                        <p>${meal.authors[0].profile_name} </br> ${meal.others.views}</p>
+                                    </div>
+                                    ${verifiedImage}
+                                </div>
+                                `;
+
+            mealsContainner.appendChild(card);                  
+        });
+    };   
+
+
+
+
+    const load_Music_data = ()=>{
+        fetch("https://openapi.programming-hero.com/api/videos/category/1001")
+        .then(res => res.json())
+        .then(data => displayMusic(data.data))
+
+        setActiveButton('search-btn2');
+        clearMealsContainer();
+    }
+
+
+    const displayMusic = (data)=>{
+        const mealsContainner = document.getElementById("meals-containner");
+        data.forEach((meal) =>{
+            console.log(meal)
+            const card = document.createElement("div");
+            card.classList.add("box")
+            const verifiedImage = meal.authors[0].verified? '<img src="/photos/verified.png"  class="verified-pic">' : '';
+            card.innerHTML = `<img src="${meal.thumbnail}" class="box-img">
+            <p class="posted-date">${formatTime(meal.others.posted_date)}</p>
+                                <h2>${meal.title}</h2>
+                                <div class="common">
+                                    <img src="${meal.thumbnail}" class="profile-pic">
+                                    <div>
+                                        <p>${meal.authors[0].profile_name} </br> ${meal.others.views}</p>
+                                    </div>
+                                    ${verifiedImage}
+                                </div>
+                                `;
+
+            mealsContainner.appendChild(card);                  
+        });
+    };
+
+
+
+
+    const load_Comedy_data = ()=>{
+        fetch("https://openapi.programming-hero.com/api/videos/category/1003")
+        .then(res => res.json())
+        .then(data => displayComedy(data.data))
+
+        setActiveButton('search-btn4');
+        clearMealsContainer();
+    }
+
+    const displayComedy = (data)=>{
+        const mealsContainner = document.getElementById("meals-containner");
+        
+        data.forEach((meal) =>{
+            console.log(meal)
+            const card = document.createElement("div");
+            card.classList.add("box")
+            const verifiedImage = meal.authors[0].verified? '<img src="/photos/verified.png"  class="verified-pic">' : '';
+            card.innerHTML = `<img src="${meal.thumbnail}" class="box-img">
+            <p class="posted-date">${formatTime(meal.others.posted_date)}</p>
+                                <h2>${meal.title}</h2>
+                                <div class="common">
+                                    <img src="${meal.thumbnail}" class="profile-pic">
+                                    <div>
+                                        <p>${meal.authors[0].profile_name} </br> ${meal.others.views}</p>
+                                    </div>
+                                    ${verifiedImage}
+                                </div>
+                                `;
+
+            mealsContainner.appendChild(card);                  
+        });
+    };
+
+
+
+
+
+
+    const load_Drawing_data = ()=>{
+        fetch("https://openapi.programming-hero.com/api/videos/category/1005")
+        .then(res => res.json())
+        .then(data => displayDrawing(data))
+
+        setActiveButton('search-btn3');
+        clearMealsContainer();
+    }
+
+
+    const displayDrawing = (data)=>{
+        const mealsContainner = document.getElementById("meals-containner");
+        
+        const card = document.createElement("div");
+        card.innerHTML = `<img src="/photos/Icon.png" class="box-img">
+                            <h2 class="h22">${data.message}</h2>`;
+
+        mealsContainner.appendChild(card);                  
+    };
+
+
+    load_All_data();
+    
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
