@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   
+    <style>  
+        .carousel-inner {
+            background-image: url(/image/Screenshot\ 2023-12-07\ 144045.png);
+            background-repeat: no-repeat;
+            
+            background-size: cover;
+        }
+        .carousel-item img {
+            max-width: 60%; 
+            height: auto; 
+            padding-top: 20px;
+        } 
+
+
+        .cards{
+            background-color: gainsboro;
+            display: flex;
+        }
+        .Right{
+        background-color: grey;
+        }
+        
+        h1{
+        font-weight: 600;
+        }
+
+
+        .product{
+            padding-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            background-color: darkseagreen;
+            justify-content: center;
+            gap: 50px;
+        }
+        .icon{
+            font-size: 1em; 
+            padding-left: 80px;
+            text-align: center;
+        }
+
+        .pre-next{
+            text-align: right;
+            padding-right: 20px;
+        }
+
+
+        .new-cards{
+        margin-top: 10px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        }
+
+
+        .footer{
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+        }
+        .foot-1{
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 20px;
+        }
+
+        i{
+            font-size: 1.5em; 
+            padding-left: 8px;
+        }
+
+
+        .ab-foot{
+            background-color: blueviolet;
+            justify-content: space-around;
+            padding-left: 100px;
+            text-align: center;
+            align-items: center;
+            display: flex;     
+            }
+
+        .ab-foot img{
+            width: 100px;
+            height: 200px;
+        }
+        @media only screen and (max-width: 425px) {
+            .cards{
+                flex-wrap: wrap;
+            }
+            .ab-foot{        
+                flex-wrap: wrap;
+            }
+
+            .footer{
+                flex-wrap: wrap;
+                gap: 14px;
+            }
+        }
+
+
+
+        
+  </style>    
+</head>
+<body>
+    <nav class="navbar p-3 navbar-expand-sm   navbar-dark bg-info">
+        <div class="container">
+
+            <img class="w-25" src="/image/Group 2.png" alt="">    
+            <form class="d-flex ms-auto">
+                <button class="btn btn-outline-success pe-5 bg-body-secondary" type="submit">Search</button>
+            </form>
+         
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+         <div class="navbar-collapse " id="navbarSupportedContent">
+            
+            <div class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-disabled="true">Contact</a>
+                </li>
+            </div> 
+
+            <i class="fas fa-shopping-cart m-3"></i>
+            <i class="far fa-address-book m-3"></i>
+        </div>
+
+        </div>
+      </nav>
+
+
+
+      <div id="slider" class="carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">    
+
+            <div class="carousel-item row text-center align-items-center d-flex  bg-primary active">
+                <div class="right col-6">
+                    <h1>Iphone 14 Pro MaX</h1>
+                    <p class="">iPhone 14 Pro Max will be available in four gorgeous new finishes: deep purple, silver, gold, and space black.</p>
+                    <button class="btn btn-dark">Visit here!</button>
+                </div>
+                <img src="/image/Iphone Image.png" class="d-block w-25 text-white col-6">
+            </div>  
+            
+            <div class="carousel-item bg-warning text-center">
+                <img class="d-block w-50 align-items-center m-auto" src="/image/Iphone 14 pro 1-2.png">
+                <div>
+                    <h1 >AirPods Max</h1>
+                    <p >AirPods Max combine high-fidelity audio with industry-leading Active Noise Cancellation 
+                        to deliver an unparalleled listening experience</p>
+                </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>           
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+    </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+    <div class="cards pt-3 ">
+
+        <div class="left ">
+            <div class="left-1 row">
+    
+                <div class="item row d-flex text-center align-items-center">
+                    <img src="/image/ipad.png" class="d-block w-50 text-white col-6">
+                    <div class="right col-6">
+                        <h1 class="bold">i Pad 9</h1>
+                        <p class="">It has the powerful A13 Bionic chip, True Tone display technology, and 64GB storage</p>
+                    </div>                   
+                </div>
+            </div>
+    
+            <div class="left-2 text-right text-bg-info">               
+                <div class="item row d-flex text-center align-items-center">
+                    <img src="/image/hero__gnfk5g59t0qe_xlarge_2x 1.png" class="headphone p-4  w-50  col-6">
+                    <div class="right col-6">
+                        <h1>Apple <br>Airpods</h1>
+                        <p>Δ AirPods Pro (2nd generation) are dust resistant and sweat and water resistant for non-water sports .</p>
+                        </div>                   
+                </div>
+            </div>
+        </div>      
+    
+    
+        <div class="Right">
+            <div class="carousel-item active row d-flex text-center align-items-center m-auto p-5">
+                <div class="right col-6">
+                    <h1>Macbook <br>Air</h1>
+                    <p>Our most popular laptop, MacBook Air is supercharged by M1 and M2 chips. Featuring FaceTime HD camera, Touch ID, and vibrant Retina display</p>
+                    <button class="btn btn-primary">Shop Now!</button>
+                </div>
+                <img src="/image/Group 6.png" class="d-block w-50 h-100 col-6">
+            </div>
+        </div>
+       </div>
+
+
+<br>
+
+
+  <div class="productssss">
+    <h5 class="text-primary">Browser by Categories from here : </h5>
+    <div class="pre-next">
+        <i class="fa-solid fa-backward"></i>
+        <span><span>    </span></span>
+        <i class="fa-solid fa-forward"></i>
+    </div>
+    <div class="product">
+        <div class="icon">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <p>Mobile</p>
+        </div>
+    
+        <div class="icon">
+            <i class="fa-regular fa-clock"></i>
+            <p>clock</p>
+        </div>
+    
+        <div class="icon">
+            <i class="fa-solid fa-camera"></i>
+            <p>camera</p>
+        </div>
+    
+        <div class="icon">
+            <i class="fa-solid fa-headphones"></i>
+            <p>headphones</p>
+        </div>
+    
+        <div class="icon">
+            <i class="fa-solid fa-computer"></i>
+            <p>computer</p>
+        </div>
+    
+        <div class="icon">
+            <i class="fa-solid fa-laptop"></i>
+            <p>laptop</p>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="new-cards p-3">
+    <div class="card text-center align-items-center" style="width: 18rem;">
+        <img src="/image/camera.png " class="card-img-top w-50" >
+        <div class="card-body">
+          <h5 class="card-title">Camera</h5>
+          <p class="card-text">Camera automatically focuses the shot and adjusts the exposure.</p>
+          <h4>$210</h4>
+          <a href="#" class="btn btn-primary">Shop Now</a>
+        </div>
+    </div>
+    <div class="card text-center align-items-center" style="width: 18rem;">
+        <img src="/image/Iphone 14 pro 1-2.png " class="card-img-top w-50" >
+        <div class="card-body">
+          <h5 class="card-title">iPhone 15</h5>
+          <p class="card-text">Check the official iPhone 15 Pro Max price in Bangladesh at Gadget & Gear.</p>
+          <h4>$1005</h4>
+          <a href="#" class="btn btn-primary">Shop Now</a>
+        </div>
+    </div>
+    <div class="card text-center align-items-center" style="width: 18rem;">
+        <img src="/image/watch.png" class="card-img-top w-50" >
+        <div class="card-body">
+          <h5 class="card-title">Watch</h5>
+          <p class="card-text">Apple Watch is the ultimate device for a healthy life. Available in three models</p>
+          <h4>$198</h4>
+          <a href="#" class="btn btn-primary">Shop Now</a>
+        </div>
+    </div>
+    <div class="card text-center align-items-center" style="width: 18rem;">
+        <img src="/image/headphone.png " class="card-img-top w-50" >
+        <div class="card-body">
+          <h5 class="card-title">Headphone</h5>
+          <p class="card-text">Enjoy premium sound quality or create music with ease. Shop headphones, earphones from Apple</p>
+          <h4>$108</h4>
+          <a href="#" class="btn btn-primary">Shop Now</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="ab-foot">
+    <div class="ab-1">
+        <img src="/image/image 19.png" >
+    </div>
+
+    <div class="ab-2">
+        <h1>
+            <span>11.11</span> Sale
+        </h1>
+        <p>Apple rarely discounts its own products, it traditionally elects to give out gift vouchers rather than reducing prices!</p>
+    </div>
+
+    <div class="ab-3">
+        <img src="/image/tab-remove.png" class="img2">
+    </div>
+
+</div>
+
+
+
+
+<div class="foot-1 p-3">  
+    <img class="w-25" src="/image/Group 2.png">                                  
+</div>
+
+
+
+<div class="footer p-5">
+
+    <div class="foot-2">
+        <p>Services </p>
+        <p>Bonus Programme</p>
+        <p>Gift Crad</p>
+        <p>Credit and Payment</p>
+        <p>Non case accpunt</p>
+        <p>Payment</p>
+    </div>
+
+    <div class="foot-3">
+        <p>Assistance to the bayer</p>
+        <p>Find orders</p>
+        <p>Exchnage and returs of goods</p>
+        <p>Guaraetee</p>
+        <p>Extra features of Goods</p>
+        <p>Others</p>
+    </div>
+</div>
+
+
+
+<div class="foot-1 p-3">  
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-square-instagram"></i>  
+    <i class="fa-brands fa-google"></i>
+    <i class="fa-brands fa-tiktok"></i>                              
+</div>
+
+
+
+</body>
+</html>
