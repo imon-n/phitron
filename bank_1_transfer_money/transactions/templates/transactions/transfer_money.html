@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block head_title %}
+Transfer Money
+{% endblock %}
+
+{% block content %}
+<div class="max-w-md mx-auto mt-10">
+    <h2 class="text-3xl font-semibold text-center text-gray-800 mb-6">Transfer Money</h2>
+    <form method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        {% csrf_token %}
+        <div class="mb-4">
+            {{ form.amount.label_tag }}
+            {{ form.amount }}
+            {% if form.amount.errors %}
+                <p class="text-red-500 text-xs italic">{{ form.amount.errors }}</p>
+            {% endif %}
+        </div>
+        <div class="mb-4">
+            {{ form.to_user_id.label_tag }}
+            {{ form.to_user_id }}
+            {% if form.to_user_id.errors %}
+                <p class="text-red-500 text-xs italic">{{ form.to_user_id.errors }}</p>
+            {% endif %}
+        </div>
+        <div class="flex items-center justify-between">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                Transfer
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+
+
+
+
+{% comment %} {% extends 'base.html' %}
+
+{% block head_title %}
+Transfer Money
+{% endblock %}
+
+{% block content %}
+    <h2>Transfer Money</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Transfer</button>
+    </form>
+{% endblock %} {% endcomment %}
+
+
