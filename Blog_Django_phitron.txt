@@ -1,1 +1,2 @@
-https://phitron.gitbook.io/django
+Github_Django : https://github.com/abdullahallnaim/Django-Courses
+Blog: https://phitron.gitbook.io/django
